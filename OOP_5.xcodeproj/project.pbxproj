@@ -11,6 +11,7 @@
 		983607C72449B87400BC2CBC /* Property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607C52449B87400BC2CBC /* Property.cpp */; };
 		983607CC2449B89F00BC2CBC /* House.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607CA2449B89F00BC2CBC /* House.cpp */; };
 		983607CF2449B8BC00BC2CBC /* Apartment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607CD2449B8BC00BC2CBC /* Apartment.cpp */; };
+		983607D52449B9C500BC2CBC /* Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607D32449B9C500BC2CBC /* Area.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		983607CB2449B89F00BC2CBC /* House.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = House.hpp; sourceTree = "<group>"; };
 		983607CD2449B8BC00BC2CBC /* Apartment.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Apartment.cpp; sourceTree = "<group>"; };
 		983607CE2449B8BC00BC2CBC /* Apartment.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Apartment.hpp; sourceTree = "<group>"; };
+		983607D32449B9C500BC2CBC /* Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Area.cpp; sourceTree = "<group>"; };
+		983607D42449B9C500BC2CBC /* Area.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Area.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,7 @@
 		983607C32449B84C00BC2CBC /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				983607D22449B99D00BC2CBC /* Utilities */,
 				983607C92449B88400BC2CBC /* Classes */,
 			);
 			path = SourceCode;
@@ -84,6 +88,7 @@
 		983607C42449B85900BC2CBC /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				983607D12449B98800BC2CBC /* Utilities */,
 				983607C82449B87800BC2CBC /* Classes */,
 			);
 			path = Headers;
@@ -107,6 +112,22 @@
 				983607CD2449B8BC00BC2CBC /* Apartment.cpp */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		983607D12449B98800BC2CBC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				983607D42449B9C500BC2CBC /* Area.hpp */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		983607D22449B99D00BC2CBC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				983607D32449B9C500BC2CBC /* Area.cpp */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +190,7 @@
 				983607BB2449B6F200BC2CBC /* main.cpp in Sources */,
 				983607CF2449B8BC00BC2CBC /* Apartment.cpp in Sources */,
 				983607CC2449B89F00BC2CBC /* House.cpp in Sources */,
+				983607D52449B9C500BC2CBC /* Area.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
