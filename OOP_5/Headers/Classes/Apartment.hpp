@@ -40,7 +40,7 @@ public:
     void setRoomsAmount(int roomsAmount);
     void setHouseType(std::string houseType);
     void setCeilingHeight(double ceilingHeight);
-    void setBulidingYear(int builingYear);
+    void setBulidingYear(int buildingYear);
     void setBalcony(bool balcony);
     void setPhone(bool phone);
     void setRepair(std::string repair);
