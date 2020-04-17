@@ -1,70 +1,93 @@
 #include "Property.hpp"
 
+using namespace std;
+
 Property::Property(double cost,
-                   std::string type,
-                   std::string location,
+                   string type,
+                   string location,
                    Area area,
-                   std::string additionalInformation,
-                   std::string notes) {
-    
+                   string additionalInformation,
+                   string notes) {
+    this->cost = cost;
+    this->type = type;
+    this->location = location;
+    this->area = area;
+    this->additionalInformation = additionalInformation;
+    this->notes = notes;
 }
 
 Property::Property(const Property& other) {
-    
+    cost = other.cost;
+    type = other.type;
+    location = other.location;
+    area = other.area;
+    additionalInformation = other.additionalInformation;
+    notes = other.notes;
 }
 
 double Property::getCost() const {
-    
+    return cost;
 }
 
-std::string Property::getType() const {
-    
+string Property::getType() const {
+    return type;
 }
 
-std::string Property::getLocation() const {
-    
+string Property::getLocation() const {
+    return location;
 }
 
 Area Property::getArea() const {
-    
+    return area;
 }
 
-std::string Property::getAdditionalInformation() const {
-    
+string Property::getAdditionalInformation() const {
+    return additionalInformation;
 }
 
-std::string Property::getNotes() const {
-    
+string Property::getNotes() const {
+    return notes;
 }
 
 void Property::setCost(double cost) {
-    
+    this->cost = cost;
 }
 
-void Property::setType(std::string type) {
-    
+void Property::setType(string type) {
+    this->type = type;
 }
 
-void Property::setLocation(std::string location) {
-    
+void Property::setLocation(string location) {
+    this->location = location;
 }
 
 void Property::setArea(Area area) {
-    
+    this->area = area;
 }
 
-void Property::setAdditionalInformation(std::string additionalInformation) {
-    
+void Property::setAdditionalInformation(string additionalInformation) {
+    this->additionalInformation = additionalInformation;
 }
 
-void Property::setNotes(std::string notes) {
-    
+void Property::setNotes(string notes) {
+    this->notes = notes;
 }
 
 void Property::printInformation() const {
-    
+    cout << "Стоимость: " << cost << endl
+    << "Тип: " << type << endl
+    << "Месторасположение: " << location << endl
+    << "Площадь: " << area << endl
+    << "Дополнительная информация: " << additionalInformation << endl
+    << "Примечания: " << notes << endl;
 }
 
 Property& Property::operator= (const Property& other) {
-    
+    cost = other.cost;
+    type = other.type;
+    location = other.location;
+    area = other.area;
+    additionalInformation = other.additionalInformation;
+    notes = other.notes;
+    return *this;
 }
