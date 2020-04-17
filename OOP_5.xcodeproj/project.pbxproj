@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		983607BB2449B6F200BC2CBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607BA2449B6F200BC2CBC /* main.cpp */; };
+		983607C72449B87400BC2CBC /* Property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607C52449B87400BC2CBC /* Property.cpp */; };
+		983607CC2449B89F00BC2CBC /* House.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607CA2449B89F00BC2CBC /* House.cpp */; };
+		983607CF2449B8BC00BC2CBC /* Apartment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607CD2449B8BC00BC2CBC /* Apartment.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		983607B72449B6F200BC2CBC /* OOP_5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OOP_5; sourceTree = BUILT_PRODUCTS_DIR; };
 		983607BA2449B6F200BC2CBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		983607C52449B87400BC2CBC /* Property.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Property.cpp; sourceTree = "<group>"; };
+		983607C62449B87400BC2CBC /* Property.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Property.hpp; sourceTree = "<group>"; };
+		983607CA2449B89F00BC2CBC /* House.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = House.cpp; sourceTree = "<group>"; };
+		983607CB2449B89F00BC2CBC /* House.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = House.hpp; sourceTree = "<group>"; };
+		983607CD2449B8BC00BC2CBC /* Apartment.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Apartment.cpp; sourceTree = "<group>"; };
+		983607CE2449B8BC00BC2CBC /* Apartment.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Apartment.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +66,47 @@
 		983607B92449B6F200BC2CBC /* OOP_5 */ = {
 			isa = PBXGroup;
 			children = (
+				983607C42449B85900BC2CBC /* Headers */,
+				983607C32449B84C00BC2CBC /* SourceCode */,
 				983607BA2449B6F200BC2CBC /* main.cpp */,
 			);
 			path = OOP_5;
+			sourceTree = "<group>";
+		};
+		983607C32449B84C00BC2CBC /* SourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				983607C92449B88400BC2CBC /* Classes */,
+			);
+			path = SourceCode;
+			sourceTree = "<group>";
+		};
+		983607C42449B85900BC2CBC /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				983607C82449B87800BC2CBC /* Classes */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		983607C82449B87800BC2CBC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				983607C62449B87400BC2CBC /* Property.hpp */,
+				983607CB2449B89F00BC2CBC /* House.hpp */,
+				983607CE2449B8BC00BC2CBC /* Apartment.hpp */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		983607C92449B88400BC2CBC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				983607C52449B87400BC2CBC /* Property.cpp */,
+				983607CA2449B89F00BC2CBC /* House.cpp */,
+				983607CD2449B8BC00BC2CBC /* Apartment.cpp */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983607C72449B87400BC2CBC /* Property.cpp in Sources */,
 				983607BB2449B6F200BC2CBC /* main.cpp in Sources */,
+				983607CF2449B8BC00BC2CBC /* Apartment.cpp in Sources */,
+				983607CC2449B89F00BC2CBC /* House.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
