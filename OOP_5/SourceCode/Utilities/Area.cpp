@@ -52,7 +52,7 @@ Area& Area::operator= (const Area& other) {
 
 
 ostream& operator<< (ostream& stream, const Area& area) {
-    stream << "Площадь общая/жилая/кухня: " << area.common << "/" << area.living
+    stream << "общая/жилая/кухня: " << area.common << "/" << area.living
     << "/" << area.kitchen;
     return stream;
 }
