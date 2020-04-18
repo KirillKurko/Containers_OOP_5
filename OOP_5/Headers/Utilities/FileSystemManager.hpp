@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 #include <map>
 #include <list>
 #include <exception>
@@ -27,10 +28,10 @@ public:
     void saveApartments(const std::list<Apartment> apartments) const;
     void saveApartment(std::ofstream& file, const Apartment& apartment) const;
     
-    std::map<int, std::list<Property*>> loadProperty() const;
-    std::list<Property*> loadHouses() const;
+    void load(std::map<int, std::list<Property*>>& property) const;
+    void loadHouses(std::list<Property*>& houses) const;
     Property* loadHouse(std::ifstream& file) const;
-    std::list<Property*> loadApartments() const;
+    void loadApartments(std::list<Property*>& apartments) const;
     Property* loadApartment(std::ifstream& file) const;
 };
 

@@ -5,7 +5,7 @@ using namespace std;
 FileSystemManager::FileSystemManager(string housesFilename,
                            string apartmentsFilname) {
     this->housesFilename = housesFilename;
-    this->apartmentsFilename = apartmentsFilename;
+    this->apartmentsFilename = apartmentsFilname;
 }
 
 void FileSystemManager::save(const std::map<int, list<Property*>>& property) const {
@@ -33,7 +33,7 @@ void FileSystemManager::saveHouses(const list<House> houses) const {
 }
 
 void FileSystemManager::saveHouse(ofstream& file, const House& house) const {
-    file << house.getCost() << endl <<
+    file << "\n" << house.getCost() << endl <<
     house.getType() << endl <<
     house.getLocation() << endl <<
     house.getArea().getCommon() << endl <<
@@ -65,7 +65,7 @@ void FileSystemManager::saveApartments(const list<Apartment> apartments) const {
 }
 
 void FileSystemManager::saveApartment(ofstream& file, const Apartment& apartment) const {
-    file << apartment.getCost() << endl <<
+    file << "\n" << apartment.getCost() << endl <<
     apartment.getType() << endl <<
     apartment.getLocation() << endl <<
     apartment.getArea().getCommon() << endl <<
@@ -83,22 +83,88 @@ void FileSystemManager::saveApartment(ofstream& file, const Apartment& apartment
     "EOA" << endl;
 }
 
-//map<int, list<Property*>> FileSystemManager::loadProperty() const {
-//
-//}
-//
-//list<Property*> FileSystemManager::loadHouses() const {
-//
-//}
-//
-//Property* FileSystemManager::loadHouse(ifstream& file) const {
-//
-//}
-//
-//list<Property*> FileSystemManager::loadApartments() const {
-//
-//}
-//
-//Property* FileSystemManager::loadApartment(ifstream& file) const {
-//
-//}
+void FileSystemManager::load(map<int, list<Property*>>& property) const {
+    loadHouses(property[HOUSES]);
+    loadApartments(property[APARTMENTS]);
+}
+
+void FileSystemManager::loadHouses(list<Property*>& houses) const {
+    string data;
+    ifstream file;
+    file.open(housesFilename, ios_base::in);
+    if (file.is_open()) {
+        while (getline(file, data)) {
+            if (data == "EOF") {
+                break;
+            }
+            auto house = loadHouse(file);
+            houses.push_back(house);
+        }
+    }
+    file.close();
+}
+
+Property* FileSystemManager::loadHouse(ifstream& file) const {
+    string data;
+    vector<string> arguments;
+    for (int i = 0; i < 17; ++i) {
+        getline(file, data);
+        arguments.push_back(data);
+    }
+    return new House(stod(arguments[0]),
+                     arguments[1],
+                     arguments[2],
+                     Area(stod(arguments[3]),
+                          stod(arguments[4]),
+                          stod(arguments[5])),
+                     arguments[6],
+                     arguments[7],
+                     stod(arguments[8]),
+                     stoi(arguments[9]),
+                     arguments[10],
+                     arguments[11],
+                     (bool)stoi(arguments[12]),
+                     (bool)stoi(arguments[13]),
+                     (bool)stoi(arguments[14]),
+                     (bool)stoi(arguments[15]));
+}
+
+void FileSystemManager::loadApartments(list<Property*>& apartments) const {
+    string data;
+    ifstream file;
+    file.open(apartmentsFilename, ios_base::in);
+    if (file.is_open()) {
+        while (getline(file, data)) {
+            if (data == "EOF") {
+                break;
+            }
+            auto apartment = loadApartment(file);
+            apartments.push_back(apartment);
+        }
+    }
+    file.close();
+}
+
+Property* FileSystemManager::loadApartment(ifstream& file) const {
+    string data;
+    vector<string> arguments;
+    for (int i = 0; i < 16; ++i) {
+        getline(file, data);
+        arguments.push_back(data);
+    }
+    return new Apartment(stod(arguments[0]),
+                         arguments[1],
+                         arguments[2],
+                         Area(stod(arguments[3]),
+                              stod(arguments[4]),
+                              stod(arguments[5])),
+                         arguments[6],
+                         arguments[7],
+                         stoi(arguments[8]),
+                         arguments[9],
+                         stod(arguments[10]),
+                         stoi(arguments[11]),
+                         (bool)stoi(arguments[12]),
+                         (bool)stoi(arguments[13]),
+                         arguments[14]);
+}
