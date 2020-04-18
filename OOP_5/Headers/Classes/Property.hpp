@@ -5,6 +5,8 @@
 #include <string>
 #include "../Utilities/Area.hpp"
 
+enum{HOUSES = 1, APARTMENTS};
+
 class Property {
 protected:
     double cost;

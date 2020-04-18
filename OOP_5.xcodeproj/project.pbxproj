@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98236330244ABD5800D16D78 /* UtilityFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9823632E244ABD5800D16D78 /* UtilityFunctions.cpp */; };
 		983607BB2449B6F200BC2CBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607BA2449B6F200BC2CBC /* main.cpp */; };
 		983607C72449B87400BC2CBC /* Property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607C52449B87400BC2CBC /* Property.cpp */; };
 		983607CC2449B89F00BC2CBC /* House.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607CA2449B89F00BC2CBC /* House.cpp */; };
 		983607CF2449B8BC00BC2CBC /* Apartment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607CD2449B8BC00BC2CBC /* Apartment.cpp */; };
 		983607D52449B9C500BC2CBC /* Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607D32449B9C500BC2CBC /* Area.cpp */; };
+		983607D8244AB8E000BC2CBC /* FileSystemManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607D6244AB8E000BC2CBC /* FileSystemManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9823632E244ABD5800D16D78 /* UtilityFunctions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UtilityFunctions.cpp; sourceTree = "<group>"; };
+		9823632F244ABD5800D16D78 /* UtilityFunctions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UtilityFunctions.hpp; sourceTree = "<group>"; };
 		983607B72449B6F200BC2CBC /* OOP_5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OOP_5; sourceTree = BUILT_PRODUCTS_DIR; };
 		983607BA2449B6F200BC2CBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		983607C52449B87400BC2CBC /* Property.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Property.cpp; sourceTree = "<group>"; };
@@ -37,6 +41,8 @@
 		983607CE2449B8BC00BC2CBC /* Apartment.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Apartment.hpp; sourceTree = "<group>"; };
 		983607D32449B9C500BC2CBC /* Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Area.cpp; sourceTree = "<group>"; };
 		983607D42449B9C500BC2CBC /* Area.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Area.hpp; sourceTree = "<group>"; };
+		983607D6244AB8E000BC2CBC /* FileSystemManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileSystemManager.cpp; sourceTree = "<group>"; };
+		983607D7244AB8E000BC2CBC /* FileSystemManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileSystemManager.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				983607D42449B9C500BC2CBC /* Area.hpp */,
+				983607D7244AB8E000BC2CBC /* FileSystemManager.hpp */,
+				9823632F244ABD5800D16D78 /* UtilityFunctions.hpp */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -126,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				983607D32449B9C500BC2CBC /* Area.cpp */,
+				983607D6244AB8E000BC2CBC /* FileSystemManager.cpp */,
+				9823632E244ABD5800D16D78 /* UtilityFunctions.cpp */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -186,11 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983607D8244AB8E000BC2CBC /* FileSystemManager.cpp in Sources */,
 				983607C72449B87400BC2CBC /* Property.cpp in Sources */,
 				983607BB2449B6F200BC2CBC /* main.cpp in Sources */,
 				983607CF2449B8BC00BC2CBC /* Apartment.cpp in Sources */,
 				983607CC2449B89F00BC2CBC /* House.cpp in Sources */,
 				983607D52449B9C500BC2CBC /* Area.cpp in Sources */,
+				98236330244ABD5800D16D78 /* UtilityFunctions.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
