@@ -44,5 +44,4 @@ namespace ApartmentSearchFunctions {
     void ByRepair(std::list<Property*>& apartments);
 }
 
-
 #endif 

@@ -2,8 +2,6 @@
 
 using namespace std;
 using namespace CommonSearchFuncitons;
-using namespace HouseSearchFucntions;
-using namespace ApartmentSearchFunctions;
 
 map<int, function<void(list<Property*>&)>> CreateSearchMenu() {
     map<int, function<void(list<Property*>&)>> searchMenu;
@@ -13,12 +11,41 @@ map<int, function<void(list<Property*>&)>> CreateSearchMenu() {
 }
 
 map<int, function<void(list<Property*>&)>> CreateSearchHousesMenu() {
+    using namespace HouseSearchFucntions;
     map<int, function<void(list<Property*>&)>> searchHousesMenu;
+    searchHousesMenu[1] = ByCost;
+    searchHousesMenu[2] = ByType;
+    searchHousesMenu[3] = ByLocation;
+    searchHousesMenu[4] = ByCommonArea;
+    searchHousesMenu[5] = ByLivingArea;
+    searchHousesMenu[6] = ByKitchenArea;
+    searchHousesMenu[7] = ByLandArea;
+    searchHousesMenu[8] = ByLevelsAmount;
+    searchHousesMenu[9] = ByWallsMaterial;
+    searchHousesMenu[10] = ByRoofMaterial;
+    searchHousesMenu[11] = WithHeating;
+    searchHousesMenu[12] = WithElectricity;
+    searchHousesMenu[13] = WithGas;
+    searchHousesMenu[14] = WithWaterSupply;
     return searchHousesMenu;
 }
 
 map<int, function<void(list<Property*>&)>> CreateSearchApartmentsMenu() {
+    using namespace ApartmentSearchFunctions;
     map<int, function<void(list<Property*>&)>> searchApartmentsMenu;
+    searchApartmentsMenu[1] = ByCost;
+    searchApartmentsMenu[2] = ByType;
+    searchApartmentsMenu[3] = ByLocation;
+    searchApartmentsMenu[4] = ByCommonArea;
+    searchApartmentsMenu[5] = ByLivingArea;
+    searchApartmentsMenu[6] = ByKitchenArea;
+    searchApartmentsMenu[7] = ByRoomsAmount;
+    searchApartmentsMenu[8] = ByHouseType;
+    searchApartmentsMenu[9] = ByCeilingHeight;
+    searchApartmentsMenu[10] = ByBuildingYear;
+    searchApartmentsMenu[11] = WithBalcony;
+    searchApartmentsMenu[12] = WithPhone;
+    searchApartmentsMenu[13] = ByRepair;
     return searchApartmentsMenu;
 }
 
@@ -40,11 +67,64 @@ void Search(std::map<int, list<Property*>> property) {
 }
 
 void SearchHouses(list<Property*>& houses) {
-
+    auto searchHousesMenu = CreateSearchHousesMenu();
+    int selection = 0;
+    while (true) {
+        cout << "\n1 - Поиск по стоимости"
+             << "\n2 - Поиск по типу"
+             << "\n3 - Поиск по месторасположению"
+             << "\n4 - Поиск по общей площади"
+             << "\n5 - Поиск по жилой площади"
+             << "\n6 - Поиск по площади кухни"
+             << "\n7 - Поиск по площади участка"
+             << "\n8 - Поиск по количеству уровней"
+             << "\n9 - Поиск по материалу стен"
+             << "\n10 - Поиск по материалу крыши"
+             << "\n11 - Поиск домов с отплением"
+             << "\n12 - Поиск домов с электричеством"
+             << "\n13 - Поиск домов с газом"
+             << "\n14 - Поиск домов с водоснабжением"
+             << "\n15 - Назад" << endl;
+        cout << "Выберите пункт меню: ";
+        cin >> selection;
+        cin.ignore();
+        try {
+            searchHousesMenu.at(selection)(houses);
+        }
+        catch (const out_of_range& exception) {
+            cout << "Выход из меню поиска домов" << endl;
+        }
+    }
 }
 
 void SearchApartments(list<Property*>& apartments) {
-    
+    auto searchApartmentsMenu = CreateSearchApartmentsMenu();
+    int selection = 0;
+    while (true) {
+        cout << "\n1 - Поиск по стоимости"
+        << "\n2 - Поиск по типу"
+        << "\n3 - Поиск по месторасположению"
+        << "\n4 - Поиск по общей площади"
+        << "\n5 - Поиск по жилой площади"
+        << "\n6 - Поиск по площади кухни"
+        << "\n7 - Поиск по количеству комнат"
+        << "\n8 - Поиск по типу дома"
+        << "\n9 - Поиск по высоте потолков"
+        << "\n10 - Поиск по году постройки"
+        << "\n11 - Поиск квартир с балконом"
+        << "\n12 - Поиск квартир с телефоном"
+        << "\n13 - Поиск по ремонту"
+        << "\n14 - Назад" << endl;
+        cout << "Выберите пункт меню: ";
+        cin >> selection;
+        cin.ignore();
+        try {
+            searchApartmentsMenu.at(selection)(apartments);
+        }
+        catch (const out_of_range& exception) {
+            cout << "Выход из меню поиска квартир" << endl;
+        }
+    }
 }
 
 void CommonSearchFuncitons::ByCost(std::list<Property*>& property) {
@@ -133,4 +213,64 @@ void CommonSearchFuncitons::ByKitchenArea(std::list<Property*>& property) {
         }
     }
     cout << "Найдено " << matchesAmount << " совпадений" << endl;
+}
+
+void HouseSearchFucntions::ByLandArea(std::list<Property*>& houses) {
+    
+}
+
+void HouseSearchFucntions::ByLevelsAmount(std::list<Property*>& houses) {
+    
+}
+
+void HouseSearchFucntions::ByWallsMaterial(std::list<Property*>& houses) {
+    
+}
+
+void HouseSearchFucntions::ByRoofMaterial(std::list<Property*>& houses) {
+    
+}
+
+void HouseSearchFucntions::WithHeating(std::list<Property*>& houses) {
+    
+}
+
+void HouseSearchFucntions::WithElectricity(std::list<Property*>& houses) {
+    
+}
+
+void HouseSearchFucntions::WithGas(std::list<Property*>& houses) {
+    
+}
+
+void HouseSearchFucntions::WithWaterSupply(std::list<Property*>& houses) {
+    
+}
+
+void ApartmentSearchFunctions::ByRoomsAmount(std::list<Property*>& apartments) {
+    
+}
+
+void ApartmentSearchFunctions::ByHouseType(std::list<Property*>& apartments) {
+    
+}
+
+void ApartmentSearchFunctions::ByCeilingHeight(std::list<Property*>& apartments) {
+    
+}
+
+void ApartmentSearchFunctions::ByBuildingYear(std::list<Property*>& apartments) {
+    
+}
+
+void ApartmentSearchFunctions::WithBalcony(std::list<Property*>& apartments) {
+    
+}
+
+void ApartmentSearchFunctions::WithPhone(std::list<Property*>& apartments) {
+    
+}
+
+void ApartmentSearchFunctions::ByRepair(std::list<Property*>& apartments) {
+    
 }
