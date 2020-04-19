@@ -10,9 +10,9 @@ FileSystemManager::FileSystemManager(string housesFilename,
 
 void FileSystemManager::save(const std::map<int, list<Property*>>& property) const {
     try {
-        auto houses = ConvertProperyToHouses(property.at(HOUSES));
+        auto houses = ToHouses(property.at(HOUSES));
         saveHouses(houses);
-        auto apartments = ConvertPropertyToApartments(property.at(APARTMENTS));
+        auto apartments = ToApartments(property.at(APARTMENTS));
         saveApartments(apartments);
     }
     catch (const out_of_range& excepition) {
