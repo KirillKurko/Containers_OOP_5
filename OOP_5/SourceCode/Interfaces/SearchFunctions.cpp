@@ -172,7 +172,7 @@ void CommonSearchFuncitons::ByLocation(std::list<Property*>& property) {
 
 void CommonSearchFuncitons::ByCommonArea(std::list<Property*>& property) {
     int matchesAmount = 0;
-    double commonArea;
+    double commonArea = 0.0;
     cout << "Введите общую площадь: ";
     cin >> commonArea;
     cin.ignore();
@@ -187,7 +187,7 @@ void CommonSearchFuncitons::ByCommonArea(std::list<Property*>& property) {
 
 void CommonSearchFuncitons::ByLivingArea(std::list<Property*>& property) {
     int matchesAmount = 0;
-    double livingArea;
+    double livingArea = 0.0;
     cout << "Введите жилую площадь: ";
     cin >> livingArea;
     cin.ignore();
@@ -202,7 +202,7 @@ void CommonSearchFuncitons::ByLivingArea(std::list<Property*>& property) {
 
 void CommonSearchFuncitons::ByKitchenArea(std::list<Property*>& property) {
     int matchesAmount = 0;
-    double kitchenArea;
+    double kitchenArea = 0.0;
     cout << "Введите площадь кухни: ";
     cin >> kitchenArea;
     cin.ignore();
@@ -216,61 +216,198 @@ void CommonSearchFuncitons::ByKitchenArea(std::list<Property*>& property) {
 }
 
 void HouseSearchFucntions::ByLandArea(std::list<Property*>& houses) {
-    
+    int matchesAmount = 0;
+    double landArea;
+    cout << "Введите площадь участка: ";
+    cin >> landArea;
+    cin.ignore();
+    for (auto& house : houses) {
+        if (ToHouse(house).getLandArea() == landArea) {
+            house->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void HouseSearchFucntions::ByLevelsAmount(std::list<Property*>& houses) {
-    
+    int matchesAmount = 0;
+    int levelsAmount = 0;
+    cout << "Введите площадь участка: ";
+    cin >> levelsAmount;
+    cin.ignore();
+    for (auto& house : houses) {
+        if (ToHouse(house).getLevelsAmount() == levelsAmount) {
+            house->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void HouseSearchFucntions::ByWallsMaterial(std::list<Property*>& houses) {
-    
+    int matchesAmount = 0;
+    string wallsMaterial;
+    cout << "Введите материал стен: ";
+    getline(cin, wallsMaterial);
+    for (auto& house : houses) {
+        if (ToHouse(house).getWallsMaterial() == wallsMaterial) {
+            house->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void HouseSearchFucntions::ByRoofMaterial(std::list<Property*>& houses) {
-    
+    int matchesAmount = 0;
+    string roofMaterial;
+    cout << "Введите материал крыши: ";
+    getline(cin, roofMaterial);
+    for (auto& house : houses) {
+        if (ToHouse(house).getRoofMaterial() == roofMaterial) {
+            house->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void HouseSearchFucntions::WithHeating(std::list<Property*>& houses) {
-    
+    int matchesAmount = 0;
+    for (auto& house : houses) {
+        if (ToHouse(house).getHeating() == true) {
+            house->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void HouseSearchFucntions::WithElectricity(std::list<Property*>& houses) {
-    
+    int matchesAmount = 0;
+    for (auto& house : houses) {
+        if (ToHouse(house).getElectricity() == true) {
+            house->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void HouseSearchFucntions::WithGas(std::list<Property*>& houses) {
-    
+    int matchesAmount = 0;
+    for (auto& house : houses) {
+        if (ToHouse(house).getGas() == true) {
+            house->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void HouseSearchFucntions::WithWaterSupply(std::list<Property*>& houses) {
-    
+    int matchesAmount = 0;
+    for (auto& house : houses) {
+        if (ToHouse(house).getWaterSupply() == true) {
+            house->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void ApartmentSearchFunctions::ByRoomsAmount(std::list<Property*>& apartments) {
-    
+    int matchesAmount = 0;
+    int roomsAmount = 0;
+    cout << "Введите количество комнат: ";
+    cin >> roomsAmount;
+    cin.ignore();
+    for (auto& apartment : apartments) {
+        if (ToApartment(apartment).getRoomsAmount() == roomsAmount) {
+            apartment->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void ApartmentSearchFunctions::ByHouseType(std::list<Property*>& apartments) {
-    
+    int matchesAmount = 0;
+    string houseType;
+    cout << "Введите тип дома: ";
+    getline(cin, houseType);
+    for (auto& apartment : apartments) {
+        if (ToApartment(apartment).getHouseType() == houseType) {
+            apartment->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void ApartmentSearchFunctions::ByCeilingHeight(std::list<Property*>& apartments) {
-    
+    int matchesAmount = 0;
+    double ceilingHeight = 0.0;
+    cout << "Введите высоту потолков: ";
+    cin >> ceilingHeight;
+    cin.ignore();
+    for (auto& apartment : apartments) {
+        if (ToApartment(apartment).getCeilingHeight() == ceilingHeight) {
+            apartment->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void ApartmentSearchFunctions::ByBuildingYear(std::list<Property*>& apartments) {
-    
+    int matchesAmount = 0;
+    int buildingYear = 0;
+    cout << "Введите год постройки: ";
+    cin >> buildingYear;
+    cin.ignore();
+    for (auto& apartment : apartments) {
+        if (ToApartment(apartment).getBuildingYear() == buildingYear) {
+            apartment->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void ApartmentSearchFunctions::WithBalcony(std::list<Property*>& apartments) {
-    
+    int matchesAmount = 0;
+    for (auto& apartment : apartments) {
+        if (ToApartment(apartment).getBalcony() == true) {
+            apartment->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void ApartmentSearchFunctions::WithPhone(std::list<Property*>& apartments) {
-    
+    int matchesAmount = 0;
+    for (auto& apartment : apartments) {
+        if (ToApartment(apartment).getPhone() == true) {
+            apartment->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
 
 void ApartmentSearchFunctions::ByRepair(std::list<Property*>& apartments) {
-    
+    int matchesAmount = 0;
+    string repair;
+    cout << "Введите ремонт: ";
+    getline(cin, repair);
+    for (auto& apartment : apartments) {
+        if (ToApartment(apartment).getRepair() == repair) {
+            apartment->printInformation();
+            ++matchesAmount;
+        }
+    }
+    cout << "Найдено " << matchesAmount << " совпадений" << endl;
 }
