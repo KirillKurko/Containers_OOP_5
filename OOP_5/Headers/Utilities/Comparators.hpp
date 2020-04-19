@@ -8,7 +8,7 @@
 
 struct Comparators {
     std::array<std::function<bool(const Property*, const Property*)>, 10> houseComparators;
-    std::array<std::function<bool(const Property*, const Property*)>, 15> apartmentComparators;
+    std::array<std::function<bool(const Property*, const Property*)>, 10> apartmentComparators;
     
     explicit Comparators();
     Comparators(const Comparators& other) = delete;

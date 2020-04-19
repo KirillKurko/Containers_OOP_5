@@ -34,7 +34,6 @@
 
 /* Begin PBXFileReference section */
 		9823632E244ABD5800D16D78 /* UtilityFunctions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UtilityFunctions.cpp; sourceTree = "<group>"; };
-		9823632F244ABD5800D16D78 /* UtilityFunctions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UtilityFunctions.hpp; sourceTree = "<group>"; };
 		98236331244B166C00D16D78 /* CreateFunctions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CreateFunctions.cpp; sourceTree = "<group>"; };
 		98236332244B166C00D16D78 /* CreateFunctions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CreateFunctions.hpp; sourceTree = "<group>"; };
 		98236337244B5F4D00D16D78 /* MainMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenu.cpp; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 		9823633B244B5FC400D16D78 /* Comparators.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Comparators.hpp; sourceTree = "<group>"; };
 		9823633D244B683A00D16D78 /* SortFunctions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SortFunctions.cpp; sourceTree = "<group>"; };
 		9823633E244B683A00D16D78 /* SortFunctions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SortFunctions.hpp; sourceTree = "<group>"; };
+		98236341244C272E00D16D78 /* UtilityFunctions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UtilityFunctions.hpp; sourceTree = "<group>"; };
 		983607B72449B6F200BC2CBC /* OOP_5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OOP_5; sourceTree = BUILT_PRODUCTS_DIR; };
 		983607BA2449B6F200BC2CBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		983607C52449B87400BC2CBC /* Property.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Property.cpp; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 			children = (
 				983607D42449B9C500BC2CBC /* Area.hpp */,
 				983607D7244AB8E000BC2CBC /* FileSystemManager.hpp */,
-				9823632F244ABD5800D16D78 /* UtilityFunctions.hpp */,
+				98236341244C272E00D16D78 /* UtilityFunctions.hpp */,
 				98236332244B166C00D16D78 /* CreateFunctions.hpp */,
 				9823633B244B5FC400D16D78 /* Comparators.hpp */,
 				9823633E244B683A00D16D78 /* SortFunctions.hpp */,
