@@ -49,7 +49,7 @@ map<int, function<void(list<Property*>&)>> CreateSearchApartmentsMenu() {
     return searchApartmentsMenu;
 }
 
-void Search(std::map<int, list<Property*>> property) {
+void Search(std::map<int, list<Property*>>& property) {
     auto searchMenu = CreateSearchMenu();
     int selection = 0;
     while (true) {
@@ -62,6 +62,7 @@ void Search(std::map<int, list<Property*>> property) {
         }
         catch (const out_of_range& exception) {
             cout << "Выход из меню поиска" << endl;
+            return;
         }
     }
 }
@@ -93,6 +94,7 @@ void SearchHouses(list<Property*>& houses) {
         }
         catch (const out_of_range& exception) {
             cout << "Выход из меню поиска домов" << endl;
+            return;
         }
     }
 }
@@ -123,6 +125,7 @@ void SearchApartments(list<Property*>& apartments) {
         }
         catch (const out_of_range& exception) {
             cout << "Выход из меню поиска квартир" << endl;
+            return;
         }
     }
 }

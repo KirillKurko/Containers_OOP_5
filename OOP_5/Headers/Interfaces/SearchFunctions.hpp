@@ -7,7 +7,7 @@
 #include <string>
 
 std::map<int, std::function<void(std::list<Property*>&)>> CreateSearchMenu();
-void Search(std::map<int, std::list<Property*>> property);
+void Search(std::map<int, std::list<Property*>>& property);
 void SearchHouses(std::list<Property*>& houses);
 void SearchApartments(std::list<Property*>& apartments);
 

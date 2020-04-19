@@ -8,7 +8,7 @@
 #include "../Classes/Apartment.hpp"
 
 std::map<int, std::function<void(std::list<Property*>&)>> CreateSortMenu();
-void Sort(std::map<int, std::list<Property*>> property);
+void Sort(std::map<int, std::list<Property*>>& property);
 void SortHouses(std::list<Property*>& houses);
 void SortApartments(std::list<Property*>& apartments);
 

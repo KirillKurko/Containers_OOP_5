@@ -11,7 +11,7 @@ map<int, function<void(list<Property*>&)>> CreateSortMenu() {
     return sortMenu;
 }
 
-void Sort(map<int, list<Property*>> property) {
+void Sort(map<int, list<Property*>>& property) {
     auto sortMenu = CreateSortMenu();
     int selection = 0;
     while (true) {
@@ -23,6 +23,7 @@ void Sort(map<int, list<Property*>> property) {
         }
         catch (const out_of_range& exception) {
             cout << "Выход из меню сортировки" << endl;
+            return;
         }
     }
 }
@@ -48,6 +49,7 @@ void SortHouses(list<Property*>& houses) {
         }
         catch (const out_of_range& exception) {
             cout << "Выход из меню сортировки домов" << endl;
+            return;
         }
     }
 }
@@ -73,6 +75,7 @@ void SortApartments(list<Property*>& apartments) {
         }
         catch (const out_of_range& exception) {
             cout << "Выход из меню сортировки квартир" << endl;
+            return;
         }
     }
 }

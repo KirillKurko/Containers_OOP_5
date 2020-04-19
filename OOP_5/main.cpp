@@ -1,12 +1,20 @@
 #include <iostream>
 #include <map>
 #include "list"
-#include "Headers/Classes/House.hpp"
-#include "Headers/Classes/Apartment.hpp"
+#include "Headers/Interfaces/MainMenu.hpp"
 #include "Headers/Utilities/FileSystemManager.hpp"
 
 using namespace std;
 
 int main() {
-    return 0;
+    FileSystemManager fileSystemManager;
+    map<int, list<Property*>> property;
+    fileSystemManager.load(property);
+    try {
+        MainMenu(property);
+    }
+    catch (...) {
+        fileSystemManager.save(property);
+        return 0;
+    }
 }

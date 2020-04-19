@@ -2,6 +2,33 @@
 
 using namespace std;
 
+map<int, function<Property*(void)>> CreateFunctions::CreateAddMenu() {
+    map<int, function<Property*(void)>> addMenu;
+    addMenu[1] = CreateHouse;
+    addMenu[2] = CreateApartment;
+    return addMenu;
+}
+
+void CreateFunctions::Add(std::map<int, std::list<Property*>>& property) {
+    auto addMenu = CreateAddMenu();
+    int selection = 0;
+    while (true) {
+        cout << "\n1 - Добавить дом"
+             << "\n2 - Добавить квартиру"
+             << "\n3 - Назад" << endl;
+        cout << "Выберите пункт меню: ";
+        cin >> selection;
+        cin.ignore();
+        try {
+            property[selection].push_back(addMenu.at(selection)());
+        }
+        catch (const out_of_range& exception) {
+            cout << "Выход из меню добавления" << endl;
+            return;
+        }
+    }
+}
+
 Property* CreateFunctions::CreateHouse() {
     using namespace CommonEnterFunctions;
     using namespace HouseEnterFunctions;

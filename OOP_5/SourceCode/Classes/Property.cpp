@@ -74,7 +74,7 @@ void Property::setNotes(string notes) {
 }
 
 void Property::printInformation() const {
-    cout << "Стоимость: " << cost << endl
+    cout << "\nСтоимость: " << cost << endl
     << "Тип: " << type << endl
     << "Месторасположение: " << location << endl
     << "Площадь: " << area << endl

@@ -19,6 +19,7 @@
 		983607CF2449B8BC00BC2CBC /* Apartment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607CD2449B8BC00BC2CBC /* Apartment.cpp */; };
 		983607D52449B9C500BC2CBC /* Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607D32449B9C500BC2CBC /* Area.cpp */; };
 		983607D8244AB8E000BC2CBC /* FileSystemManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607D6244AB8E000BC2CBC /* FileSystemManager.cpp */; };
+		9852163C244C7F86008669D8 /* ViewMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9852163A244C7F86008669D8 /* ViewMenu.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,8 @@
 		983607D42449B9C500BC2CBC /* Area.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Area.hpp; sourceTree = "<group>"; };
 		983607D6244AB8E000BC2CBC /* FileSystemManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileSystemManager.cpp; sourceTree = "<group>"; };
 		983607D7244AB8E000BC2CBC /* FileSystemManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileSystemManager.hpp; sourceTree = "<group>"; };
+		9852163A244C7F86008669D8 /* ViewMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ViewMenu.cpp; sourceTree = "<group>"; };
+		9852163B244C7F86008669D8 /* ViewMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ViewMenu.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 				98236338244B5F4D00D16D78 /* MainMenu.hpp */,
 				9823633E244B683A00D16D78 /* SortFunctions.hpp */,
 				98236347244C39CB00D16D78 /* SearchFunctions.hpp */,
+				9852163B244C7F86008669D8 /* ViewMenu.hpp */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -87,6 +91,7 @@
 				98236337244B5F4D00D16D78 /* MainMenu.cpp */,
 				9823633D244B683A00D16D78 /* SortFunctions.cpp */,
 				98236346244C39CB00D16D78 /* SearchFunctions.cpp */,
+				9852163A244C7F86008669D8 /* ViewMenu.cpp */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				98236348244C39CB00D16D78 /* SearchFunctions.cpp in Sources */,
 				983607C72449B87400BC2CBC /* Property.cpp in Sources */,
 				983607BB2449B6F200BC2CBC /* main.cpp in Sources */,
+				9852163C244C7F86008669D8 /* ViewMenu.cpp in Sources */,
 				983607CF2449B8BC00BC2CBC /* Apartment.cpp in Sources */,
 				983607CC2449B89F00BC2CBC /* House.cpp in Sources */,
 				983607D52449B9C500BC2CBC /* Area.cpp in Sources */,

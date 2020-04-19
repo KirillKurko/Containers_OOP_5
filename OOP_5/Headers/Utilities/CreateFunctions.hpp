@@ -2,6 +2,8 @@
 #define CreateFunctions_hpp
 
 #include <iostream>
+#include <map>
+#include <list>
 #include "../Classes/House.hpp"
 #include "../Classes/Apartment.hpp"
 
@@ -36,6 +38,8 @@ namespace ApartmentEnterFunctions {
 }
 
 namespace CreateFunctions {
+    std::map<int, std::function<Property*(void)>> CreateAddMenu();
+    void Add(std::map<int, std::list<Property*>>& property);
     Property* CreateHouse();
     Property* CreateApartment();
 }
