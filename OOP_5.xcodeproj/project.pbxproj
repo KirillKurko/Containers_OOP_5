@@ -13,6 +13,7 @@
 		9823633C244B5FC400D16D78 /* Comparators.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9823633A244B5FC400D16D78 /* Comparators.cpp */; };
 		9823633F244B683A00D16D78 /* SortFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9823633D244B683A00D16D78 /* SortFunctions.cpp */; };
 		98236348244C39CB00D16D78 /* SearchFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98236346244C39CB00D16D78 /* SearchFunctions.cpp */; };
+		982AAA6C244D7CEB006BA56E /* RemoveMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 982AAA6A244D7CEB006BA56E /* RemoveMenu.cpp */; };
 		983607BB2449B6F200BC2CBC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607BA2449B6F200BC2CBC /* main.cpp */; };
 		983607C72449B87400BC2CBC /* Property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607C52449B87400BC2CBC /* Property.cpp */; };
 		983607CC2449B89F00BC2CBC /* House.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 983607CA2449B89F00BC2CBC /* House.cpp */; };
@@ -47,6 +48,8 @@
 		98236341244C272E00D16D78 /* UtilityFunctions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UtilityFunctions.hpp; sourceTree = "<group>"; };
 		98236346244C39CB00D16D78 /* SearchFunctions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SearchFunctions.cpp; sourceTree = "<group>"; };
 		98236347244C39CB00D16D78 /* SearchFunctions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SearchFunctions.hpp; sourceTree = "<group>"; };
+		982AAA6A244D7CEB006BA56E /* RemoveMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RemoveMenu.cpp; sourceTree = "<group>"; };
+		982AAA6B244D7CEB006BA56E /* RemoveMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RemoveMenu.hpp; sourceTree = "<group>"; };
 		983607B72449B6F200BC2CBC /* OOP_5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OOP_5; sourceTree = BUILT_PRODUCTS_DIR; };
 		983607BA2449B6F200BC2CBC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		983607C52449B87400BC2CBC /* Property.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Property.cpp; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 				9823633E244B683A00D16D78 /* SortFunctions.hpp */,
 				98236347244C39CB00D16D78 /* SearchFunctions.hpp */,
 				9852163B244C7F86008669D8 /* ViewMenu.hpp */,
+				982AAA6B244D7CEB006BA56E /* RemoveMenu.hpp */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -92,6 +96,7 @@
 				9823633D244B683A00D16D78 /* SortFunctions.cpp */,
 				98236346244C39CB00D16D78 /* SearchFunctions.cpp */,
 				9852163A244C7F86008669D8 /* ViewMenu.cpp */,
+				982AAA6A244D7CEB006BA56E /* RemoveMenu.cpp */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				9852163C244C7F86008669D8 /* ViewMenu.cpp in Sources */,
 				983607CF2449B8BC00BC2CBC /* Apartment.cpp in Sources */,
 				983607CC2449B89F00BC2CBC /* House.cpp in Sources */,
+				982AAA6C244D7CEB006BA56E /* RemoveMenu.cpp in Sources */,
 				983607D52449B9C500BC2CBC /* Area.cpp in Sources */,
 				98236330244ABD5800D16D78 /* UtilityFunctions.cpp in Sources */,
 				9823633C244B5FC400D16D78 /* Comparators.cpp in Sources */,
