@@ -12,5 +12,8 @@ std::list<Apartment> ToApartments(const std::list<Property*>& property);
 House ToHouse(const Property* property);
 Apartment ToApartment(const Property* property);
 
+House& ToHouse(Property* property);
+Apartment& ToApartment(Property* property);
+
 
 #endif

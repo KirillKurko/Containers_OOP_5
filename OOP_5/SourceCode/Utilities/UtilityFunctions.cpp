@@ -26,3 +26,10 @@ Apartment ToApartment(const Property* property) {
      return *dynamic_cast<Apartment*>(const_cast<Property*>(property));
 }
 
+House& ToHouse(Property* property) {
+    return *dynamic_cast<House*>(const_cast<Property*>(property));
+}
+
+Apartment& ToApartment(Property* property) {
+    return *dynamic_cast<Apartment*>(const_cast<Property*>(property));
+}
