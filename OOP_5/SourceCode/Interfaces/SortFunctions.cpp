@@ -13,11 +13,12 @@ map<int, function<void(list<Property*>&)>> CreateSortMenu() {
 
 void Sort(map<int, list<Property*>>& property) {
     auto sortMenu = CreateSortMenu();
-    int selection = 0;
+    auto selection = 0;
     while (true) {
         cout << "\n1 - Сортировать дома\n2 - Сортировать квартиры\n3 - Назад" << endl;
         cout << "Выберите пункт меню: ";
         cin >> selection;
+        cin.ignore();
         try {
             sortMenu.at(selection)(property[selection]);
         }
@@ -29,7 +30,7 @@ void Sort(map<int, list<Property*>>& property) {
 }
 
 void SortHouses(list<Property*>& houses) {
-    int selection = 0;
+    auto selection = 0;
     while (true) {
         cout << "\n1 - Сортировка по стоимости"
              << "\n2 - Сортировка по типу"
@@ -44,6 +45,7 @@ void SortHouses(list<Property*>& houses) {
              << "\n11 - Назад" << endl;
         cout << "Выберите пункт меню: ";
         cin >> selection;
+        cin.ignore();
         try {
             houses.sort(comparators.houseComparators.at(selection - 1));
         }
@@ -55,7 +57,7 @@ void SortHouses(list<Property*>& houses) {
 }
 
 void SortApartments(list<Property*>& apartments) {
-    int selection = 0;
+    auto selection = 0;
     while (true) {
         cout << "\n1 - Сортировка по стоимости"
         << "\n2 - Сортировка по типу"
@@ -70,6 +72,7 @@ void SortApartments(list<Property*>& apartments) {
         << "\n11 - Назад" << endl;
         cout << "Выберите пункт меню: ";
         cin >> selection;
+        cin.ignore();
         try {
             apartments.sort(comparators.apartmentComparators.at(selection - 1));
         }

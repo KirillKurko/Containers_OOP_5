@@ -51,7 +51,7 @@ map<int, function<void(list<Property*>&)>> CreateSearchApartmentsMenu() {
 
 void Search(std::map<int, list<Property*>>& property) {
     auto searchMenu = CreateSearchMenu();
-    int selection = 0;
+    auto selection = 0;
     while (true) {
         cout << "\n1 - Поиск домов\n2 - Поиск квартир\n3 - Назад" << endl;
         cout << "Выберите пункт меню: ";
@@ -69,7 +69,7 @@ void Search(std::map<int, list<Property*>>& property) {
 
 void SearchHouses(list<Property*>& houses) {
     auto searchHousesMenu = CreateSearchHousesMenu();
-    int selection = 0;
+    auto selection = 0;
     while (true) {
         cout << "\n1 - Поиск по стоимости"
              << "\n2 - Поиск по типу"
@@ -101,7 +101,7 @@ void SearchHouses(list<Property*>& houses) {
 
 void SearchApartments(list<Property*>& apartments) {
     auto searchApartmentsMenu = CreateSearchApartmentsMenu();
-    int selection = 0;
+    auto selection = 0;
     while (true) {
         cout << "\n1 - Поиск по стоимости"
         << "\n2 - Поиск по типу"
@@ -131,7 +131,7 @@ void SearchApartments(list<Property*>& apartments) {
 }
 
 void CommonSearchFuncitons::ByCost(std::list<Property*>& property) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     double cost = 0.0;
     cout << "Введите стоимость: ";
     cin >> cost;
@@ -146,7 +146,7 @@ void CommonSearchFuncitons::ByCost(std::list<Property*>& property) {
 }
 
 void CommonSearchFuncitons::ByType(std::list<Property*>& property) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     string type;
     cout << "Введите тип: ";
     getline(cin, type);
@@ -160,7 +160,7 @@ void CommonSearchFuncitons::ByType(std::list<Property*>& property) {
 }
 
 void CommonSearchFuncitons::ByLocation(std::list<Property*>& property) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     string location;
     cout << "Введите месторасположение: ";
     getline(cin, location);
@@ -174,7 +174,7 @@ void CommonSearchFuncitons::ByLocation(std::list<Property*>& property) {
 }
 
 void CommonSearchFuncitons::ByCommonArea(std::list<Property*>& property) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     double commonArea = 0.0;
     cout << "Введите общую площадь: ";
     cin >> commonArea;
@@ -189,7 +189,7 @@ void CommonSearchFuncitons::ByCommonArea(std::list<Property*>& property) {
 }
 
 void CommonSearchFuncitons::ByLivingArea(std::list<Property*>& property) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     double livingArea = 0.0;
     cout << "Введите жилую площадь: ";
     cin >> livingArea;
@@ -204,7 +204,7 @@ void CommonSearchFuncitons::ByLivingArea(std::list<Property*>& property) {
 }
 
 void CommonSearchFuncitons::ByKitchenArea(std::list<Property*>& property) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     double kitchenArea = 0.0;
     cout << "Введите площадь кухни: ";
     cin >> kitchenArea;
@@ -219,7 +219,7 @@ void CommonSearchFuncitons::ByKitchenArea(std::list<Property*>& property) {
 }
 
 void HouseSearchFucntions::ByLandArea(std::list<Property*>& houses) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     double landArea;
     cout << "Введите площадь участка: ";
     cin >> landArea;
@@ -234,8 +234,8 @@ void HouseSearchFucntions::ByLandArea(std::list<Property*>& houses) {
 }
 
 void HouseSearchFucntions::ByLevelsAmount(std::list<Property*>& houses) {
-    int matchesAmount = 0;
-    int levelsAmount = 0;
+    auto matchesAmount = 0;
+    auto levelsAmount = 0;
     cout << "Введите площадь участка: ";
     cin >> levelsAmount;
     cin.ignore();
@@ -249,7 +249,7 @@ void HouseSearchFucntions::ByLevelsAmount(std::list<Property*>& houses) {
 }
 
 void HouseSearchFucntions::ByWallsMaterial(std::list<Property*>& houses) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     string wallsMaterial;
     cout << "Введите материал стен: ";
     getline(cin, wallsMaterial);
@@ -263,7 +263,7 @@ void HouseSearchFucntions::ByWallsMaterial(std::list<Property*>& houses) {
 }
 
 void HouseSearchFucntions::ByRoofMaterial(std::list<Property*>& houses) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     string roofMaterial;
     cout << "Введите материал крыши: ";
     getline(cin, roofMaterial);
@@ -277,7 +277,7 @@ void HouseSearchFucntions::ByRoofMaterial(std::list<Property*>& houses) {
 }
 
 void HouseSearchFucntions::WithHeating(std::list<Property*>& houses) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     for (auto& house : houses) {
         if (ToHouse(house).getHeating() == true) {
             house->printInformation();
@@ -288,7 +288,7 @@ void HouseSearchFucntions::WithHeating(std::list<Property*>& houses) {
 }
 
 void HouseSearchFucntions::WithElectricity(std::list<Property*>& houses) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     for (auto& house : houses) {
         if (ToHouse(house).getElectricity() == true) {
             house->printInformation();
@@ -299,7 +299,7 @@ void HouseSearchFucntions::WithElectricity(std::list<Property*>& houses) {
 }
 
 void HouseSearchFucntions::WithGas(std::list<Property*>& houses) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     for (auto& house : houses) {
         if (ToHouse(house).getGas() == true) {
             house->printInformation();
@@ -310,7 +310,7 @@ void HouseSearchFucntions::WithGas(std::list<Property*>& houses) {
 }
 
 void HouseSearchFucntions::WithWaterSupply(std::list<Property*>& houses) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     for (auto& house : houses) {
         if (ToHouse(house).getWaterSupply() == true) {
             house->printInformation();
@@ -321,8 +321,8 @@ void HouseSearchFucntions::WithWaterSupply(std::list<Property*>& houses) {
 }
 
 void ApartmentSearchFunctions::ByRoomsAmount(std::list<Property*>& apartments) {
-    int matchesAmount = 0;
-    int roomsAmount = 0;
+    auto matchesAmount = 0;
+    auto roomsAmount = 0;
     cout << "Введите количество комнат: ";
     cin >> roomsAmount;
     cin.ignore();
@@ -350,7 +350,7 @@ void ApartmentSearchFunctions::ByHouseType(std::list<Property*>& apartments) {
 }
 
 void ApartmentSearchFunctions::ByCeilingHeight(std::list<Property*>& apartments) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     double ceilingHeight = 0.0;
     cout << "Введите высоту потолков: ";
     cin >> ceilingHeight;
@@ -365,8 +365,8 @@ void ApartmentSearchFunctions::ByCeilingHeight(std::list<Property*>& apartments)
 }
 
 void ApartmentSearchFunctions::ByBuildingYear(std::list<Property*>& apartments) {
-    int matchesAmount = 0;
-    int buildingYear = 0;
+    auto matchesAmount = 0;
+    auto buildingYear = 0;
     cout << "Введите год постройки: ";
     cin >> buildingYear;
     cin.ignore();
@@ -380,7 +380,7 @@ void ApartmentSearchFunctions::ByBuildingYear(std::list<Property*>& apartments) 
 }
 
 void ApartmentSearchFunctions::WithBalcony(std::list<Property*>& apartments) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     for (auto& apartment : apartments) {
         if (ToApartment(apartment).getBalcony() == true) {
             apartment->printInformation();
@@ -391,7 +391,7 @@ void ApartmentSearchFunctions::WithBalcony(std::list<Property*>& apartments) {
 }
 
 void ApartmentSearchFunctions::WithPhone(std::list<Property*>& apartments) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     for (auto& apartment : apartments) {
         if (ToApartment(apartment).getPhone() == true) {
             apartment->printInformation();
@@ -402,7 +402,7 @@ void ApartmentSearchFunctions::WithPhone(std::list<Property*>& apartments) {
 }
 
 void ApartmentSearchFunctions::ByRepair(std::list<Property*>& apartments) {
-    int matchesAmount = 0;
+    auto matchesAmount = 0;
     string repair;
     cout << "Введите ремонт: ";
     getline(cin, repair);
