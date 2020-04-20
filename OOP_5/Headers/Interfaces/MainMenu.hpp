@@ -11,6 +11,7 @@
 #include "SearchFunctions.hpp"
 #include "ViewMenu.hpp"
 #include "RemoveMenu.hpp"
+#include "EditMenu.hpp"
 
 std::map<int, std::function<void(std::map<int, std::list<Property*>>&)>> CreateMainMenu();
 void MainMenu(std::map<int, std::list<Property*>>&);

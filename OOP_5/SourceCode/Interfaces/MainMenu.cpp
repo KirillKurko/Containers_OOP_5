@@ -6,6 +6,7 @@ map<int, function<void(map<int, list<Property*>>&)>> CreateMainMenu() {
     map<int, function<void(map<int, list<Property*>>&)>> mainMenu;
     mainMenu[1] = CreateFunctions::Add;
     mainMenu[2] = Remove;
+    mainMenu[3] = Edit;
     mainMenu[4] = View;
     mainMenu[5] = Search;
     mainMenu[6] = Sort;
