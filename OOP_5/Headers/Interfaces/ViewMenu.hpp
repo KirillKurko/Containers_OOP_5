@@ -3,7 +3,6 @@
 
 #include <list>
 #include <map>
-#include "../Utilities/Comparators.hpp"
 #include "../Classes/House.hpp"
 #include "../Classes/Apartment.hpp"
 
